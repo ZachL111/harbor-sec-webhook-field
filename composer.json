@@ -1,0 +1,10 @@
+{
+  "name": "zachl111/harbor-sec-webhook-field",
+  "description": "Implement a PHP security tooling project for webhook state machine modeling, using transition tables and invalid-transition tests.",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Portfolio\\": "src/"
+    }
+  }
+}
