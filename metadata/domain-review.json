@@ -1,0 +1,73 @@
+{
+  "repo": "harbor-sec-webhook-field",
+  "language": "PHP",
+  "category": "Security tooling",
+  "goal": "Implement a PHP security tooling project for webhook state machine modeling, using transition tables and invalid-transition tests.",
+  "review_model": {
+    "terms": [
+      "trust boundary",
+      "claim drift",
+      "replay exposure",
+      "policy width"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "trust boundary",
+      "signal": 47,
+      "slack": 28,
+      "drag": 10,
+      "confidence": 61,
+      "score": 153,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "claim drift",
+      "signal": 74,
+      "slack": 38,
+      "drag": 15,
+      "confidence": 86,
+      "score": 227,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "replay exposure",
+      "signal": 60,
+      "slack": 27,
+      "drag": 18,
+      "confidence": 80,
+      "score": 173,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "policy width",
+      "signal": 61,
+      "slack": 24,
+      "drag": 27,
+      "confidence": 53,
+      "score": 118,
+      "lane": "watch"
+    },
+    {
+      "name": "stale",
+      "focus": "trust boundary",
+      "signal": 89,
+      "slack": 42,
+      "drag": 14,
+      "confidence": 84,
+      "score": 262,
+      "lane": "ship"
+    }
+  ]
+}
