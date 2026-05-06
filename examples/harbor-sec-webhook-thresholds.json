@@ -1,0 +1,17 @@
+{
+  "repo": "harbor-sec-webhook-field",
+  "thresholds": {
+    "signal": 4,
+    "slack": 2,
+    "confidence": 1,
+    "drag": 3,
+    "ship": 187,
+    "watch": 109
+  },
+  "terms": [
+    "trust boundary",
+    "claim drift",
+    "replay exposure",
+    "policy width"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "repo": "harbor-sec-webhook-field",
+  "language": "PHP",
+  "category": "Security tooling",
+  "goal": "Implement a PHP security tooling project for webhook state machine modeling, using transition tables and invalid-transition tests.",
+  "weights": {
+    "signal": 4,
+    "slack": 2,
+    "confidence": 1,
+    "drag": 3
+  },
+  "thresholds": {
+    "ship": 187,
+    "watch": 109
+  },
+  "properties": [
+    "raising signal cannot reduce score",
+    "raising drag cannot improve score",
+    "lane labels must match configured thresholds",
+    "golden fixture ids must remain unique"
+  ],
+  "fixture_files": [
+    "fixtures/golden/scoreboard.csv",
+    "fixtures/golden/lane-matrix.csv",
+    "fixtures/fuzz/mutations.csv",
+    "fixtures/fuzz/boundary-cases.jsonl"
+  ]
+}
